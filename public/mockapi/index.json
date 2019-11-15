@@ -1,0 +1,32 @@
+{
+  "exercises": [
+    {
+      "name": "Squat",
+      "max": 180,
+      "volume": 3300
+    },
+    {
+      "name": "Deadlift",
+      "max": 240,
+      "volume": 2400
+    },
+    {
+      "name": "Chin-up",
+      "max": 25,
+      "volume": 1000
+    },
+    {
+      "name": "Benchpress",
+      "max": 120,
+      "volume": 3000
+    }
+  ],
+  "user": {
+    "firstName": "Marcus",
+    "lastName": "Hultkrantz",
+    "lastWorkout": {
+      "date": "2019.05.23",
+      "name": "Benchpress"
+    }
+  }
+}
