@@ -26,11 +26,13 @@ function Exercises() {
     loading: true
   });
 
-  axios.get("mockapi/index.json").then(response => {
-    setTimeout(() => {
-      setExercises({ data: response.data.exercises, loading: false });
-    }, 1000);
-  });
+  useEffect(() => {
+    axios.get("mockapi/index.json").then(response => {
+      setTimeout(() => {
+        setExercises({ data: response.data.exercises, loading: false });
+      }, 1000);
+    });
+  }, []);
 
   const classes = useStyles();
 

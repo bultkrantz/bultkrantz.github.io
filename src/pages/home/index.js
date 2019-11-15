@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import Typography from "@material-ui/core/Typography";
 import axios from "axios";
 import Skeleton from "@material-ui/lab/Skeleton";
@@ -9,11 +9,13 @@ function Home() {
     loading: true
   });
 
-  axios.get("mockapi/index.json").then(response => {
-    setTimeout(() => {
-      setUser({ data: response.data.user, loading: false });
-    }, 1000);
-  });
+  useEffect(() => {
+    axios.get("mockapi/index.json").then(response => {
+      setTimeout(() => {
+        setUser({ data: response.data.user, loading: false });
+      }, 1000);
+    });
+  }, []);
 
   if (user.loading) {
     return (
